@@ -66,10 +66,10 @@ export default function PlayerCard({ player, mode, goalScore, onScoreChange }: P
         ))}
       </div>
 
-      <div className="flex items-center gap-2">
+      <div className="grid grid-cols-6 gap-1">
         <button
           onClick={() => applyCustom(-1)}
-          className="w-10 h-10 shrink-0 bg-red-50 hover:bg-red-100 text-red-600 text-xl font-bold rounded-lg transition-colors"
+          className="col-span-1 py-2 bg-red-50 hover:bg-red-100 text-red-600 text-xl font-bold rounded-lg transition-colors"
         >
           −
         </button>
@@ -78,11 +78,11 @@ export default function PlayerCard({ player, mode, goalScore, onScoreChange }: P
           value={customAmount}
           onChange={(e) => setCustomAmount(e.target.value)}
           min="0"
-          className="flex-1 text-center border border-gray-200 rounded-lg py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="col-span-4 text-center border border-gray-200 rounded-lg py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
         <button
           onClick={() => applyCustom(1)}
-          className="w-10 h-10 shrink-0 bg-green-50 hover:bg-green-100 text-green-600 text-xl font-bold rounded-lg transition-colors"
+          className="col-span-1 py-2 bg-green-50 hover:bg-green-100 text-green-600 text-xl font-bold rounded-lg transition-colors"
         >
           +
         </button>
