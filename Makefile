@@ -4,14 +4,18 @@ run:
 	docker compose up
 
 build:
-	docker compose run --rm -e NODE_ENV=production app npm run build
+	docker compose run --rm \
+		-e NODE_ENV=production \
+		-e NEXT_PUBLIC_BASE_PATH=${NEXT_PUBLIC_BASE_PATH} \
+		app npm run build
 
 # re-install if any changes made with npm install
 install:
 	docker compose down
 	docker compose build
 
-deploy: build
+deploy:
+	$(MAKE) build NEXT_PUBLIC_BASE_PATH=/game-scoring
 	cd out && \
 	git init && \
 	git add -A && \
