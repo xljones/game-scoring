@@ -97,7 +97,7 @@ export default function Setup({ config, onStart }: Props) {
                 value={goalScore || ''}
                 onChange={(e) => setGoalScore(Number(e.target.value))}
                 placeholder="No goal"
-                className="flex-1 border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="flex-1 border border-gray-200 rounded-lg px-3 py-2 text-base focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
           )}
@@ -109,7 +109,7 @@ export default function Setup({ config, onStart }: Props) {
                 type="number"
                 value={startScore}
                 onChange={(e) => setStartScore(Number(e.target.value))}
-                className="flex-1 border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="flex-1 border border-gray-200 rounded-lg px-3 py-2 text-base focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
           )}

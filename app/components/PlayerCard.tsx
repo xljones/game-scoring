@@ -80,7 +80,7 @@ export default function PlayerCard({ player, mode, goalScore, onScoreChange }: P
           value={customAmount}
           onChange={(e) => setCustomAmount(e.target.value.replace(/\D/g, ''))}
           onFocus={(e) => e.target.select()}
-          className="col-span-4 text-center border border-gray-200 rounded-lg py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="col-span-4 text-center border border-gray-200 rounded-lg py-2 text-base focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
         <button
           onClick={() => applyCustom(1)}
