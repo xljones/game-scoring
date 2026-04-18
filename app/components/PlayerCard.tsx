@@ -74,10 +74,11 @@ export default function PlayerCard({ player, mode, goalScore, onScoreChange }: P
           −
         </button>
         <input
-          type="number"
+          type="text"
+          inputMode="numeric"
+          pattern="[0-9]*"
           value={customAmount}
-          onChange={(e) => setCustomAmount(e.target.value)}
-          min="0"
+          onChange={(e) => setCustomAmount(e.target.value.replace(/\D/g, ''))}
           className="col-span-4 text-center border border-gray-200 rounded-lg py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
         <button
