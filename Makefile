@@ -1,4 +1,6 @@
-.PHONY: run build install
+.PHONY: run build install deploy
+
+REMOTE := $(shell git remote get-url origin)
 
 run:
 	docker compose up
@@ -10,3 +12,10 @@ build:
 install:
 	docker compose down
 	docker compose build
+
+deploy: build
+	cd out && \
+	git init && \
+	git add -A && \
+	git commit -m "Deploy $$(date)" && \
+	git push -f $(REMOTE) HEAD:gh-pages
