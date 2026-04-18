@@ -52,7 +52,8 @@ export default function Setup({ config, onStart }: Props) {
                 type="text"
                 value={player.name}
                 onChange={(e) => updateName(player.id, e.target.value)}
-                className="flex-1 border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                onFocus={(e) => { if (/^Player \d+$/.test(player.name)) e.target.select() }}
+                className="flex-1 border border-gray-200 rounded-lg px-3 py-2 text-base focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
               <button
                 onClick={() => removePlayer(player.id)}
