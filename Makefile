@@ -1,7 +1,5 @@
 .PHONY: run build install deploy
 
-REMOTE := $(shell git remote get-url origin)
-
 run:
 	docker compose up
 
