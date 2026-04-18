@@ -10,6 +10,7 @@ build:
 		-e NODE_ENV=production \
 		-e NEXT_PUBLIC_BASE_PATH=$(NEXT_PUBLIC_BASE_PATH) \
 		app npm run build
+	touch out/.nojekyll
 
 # re-install if any changes made with npm install
 install:
