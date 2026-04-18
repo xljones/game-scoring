@@ -8,7 +8,7 @@ run:
 build:
 	docker compose run --rm \
 		-e NODE_ENV=production \
-		-e NEXT_PUBLIC_BASE_PATH=${NEXT_PUBLIC_BASE_PATH} \
+		-e NEXT_PUBLIC_BASE_PATH=$(NEXT_PUBLIC_BASE_PATH) \
 		app npm run build
 
 # re-install if any changes made with npm install
