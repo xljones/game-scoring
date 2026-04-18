@@ -4,7 +4,7 @@ run:
 	docker compose up
 
 build:
-	docker compose run --rm app npm run build
+	docker compose run --rm -e NODE_ENV=production app npm run build
 
 # re-install if any changes made with npm install
 install:
